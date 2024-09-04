@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/iOS-13.0+-FFDAB9.svg" />
+    <img src="https://img.shields.io/badge/iOS-15.0+-FFDAB9.svg" />
     <img src="https://img.shields.io/badge/macOS-10.15+-FFD700.svg" />
     <a href="https://det.social/@weltraumkojote">
       <img alt="Mastodon: @weltraumkojote" src="https://img.shields.io/badge/%40weltraumkojote-%236364FF?style=flat&logo=mastodon&logoColor=%23FFFFFF">
