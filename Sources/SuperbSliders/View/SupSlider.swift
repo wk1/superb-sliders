@@ -62,25 +62,34 @@ public struct SupSlider: View {
     return min(range.upperBound, max(range.lowerBound, roundedValue))
   }
   
-  public var body: some View {
+  private var slider: some View {
+    ZStack(alignment: .leading) {
       ZStack(alignment: .leading) {
-        ZStack(alignment: .leading) {
-          Track(height: trackStyle.height)
-          Track(
-            height: trackStyle.height,
-            value: trackStyle == .thin(inset: true) || trackStyle == .medium(inset: true) ? thumbPosition(in: trackWidth-thumbStyle.width) : thumbPosition(in: trackWidth-thumbStyle.width) + thumbStyle.width
-          )
-        }
-        .padding([.leading, .trailing], trackStyle.padding(thumb: thumbStyle))
-        .readSize(onChange: { size in
-          trackWidth = size.width
-        })
-        
-        thumbStyle.thumb
-          .offset(x: thumbPosition(in: trackWidth-thumbStyle.width))
-          .gesture(horizontalDrag)
+        Track(height: trackStyle.height)
+        Track(
+          height: trackStyle.height,
+          value: trackStyle == .thin(inset: true) || trackStyle == .medium(inset: true) ? thumbPosition(in: trackWidth-thumbStyle.width) : thumbPosition(in: trackWidth-thumbStyle.width) + thumbStyle.width
+        )
       }
-      .frame(height: thumbStyle.height)
+      .padding([.leading, .trailing], trackStyle.padding(thumb: thumbStyle))
+      .readSize(onChange: { size in
+        trackWidth = size.width
+      })
+      
+      thumbStyle.thumb
+        .offset(x: thumbPosition(in: trackWidth-thumbStyle.width))
+        .gesture(horizontalDrag)
+    }
+    .frame(height: thumbStyle.height)
+  }
+  
+  public var body: some View {
+    if trackStyle == .bold {
+      slider
+        .clipped()
+    } else {
+      slider
+    }
   }
 }
 
