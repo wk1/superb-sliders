@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SupSlider: View {
+public struct SupSlider: View {
   
   @Binding var value: Double
   
@@ -15,7 +15,7 @@ struct SupSlider: View {
   var thumbStyle: ThumbStyle
   var onEditingChanged: ((Bool) -> Void)?
   
-  init(
+  public init(
     value: Binding<Double>,
     in range: ClosedRange<Double> = 0.0...100.0,
     step: Double = 0.1,
@@ -62,7 +62,7 @@ struct SupSlider: View {
     return min(range.upperBound, max(range.lowerBound, roundedValue))
   }
   
-  var body: some View {
+  public var body: some View {
       ZStack(alignment: .leading) {
         ZStack(alignment: .leading) {
           Track(height: trackStyle.height)

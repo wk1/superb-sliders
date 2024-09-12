@@ -1,6 +1,6 @@
 import CoreGraphics
 
-enum TrackStyle: Equatable {
+public enum TrackStyle: Equatable {
   case thin(inset: Bool)
   case medium(inset: Bool)
   case bold
