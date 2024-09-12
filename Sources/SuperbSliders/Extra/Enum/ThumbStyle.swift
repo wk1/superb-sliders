@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum ThumbStyle {
+public enum ThumbStyle {
   case rect(skeumorph: Bool)
   case square(skeumorph: Bool)
   case oval(skeumorph: Bool)
