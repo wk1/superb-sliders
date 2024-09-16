@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct SupSlider: View {
+public struct ValueSlider: View {
   
   @Binding var value: Double
   
@@ -109,7 +109,7 @@ public struct SupSlider: View {
       ScrollView {
         VStack(spacing: 0) {
           Group {
-            SupSlider(
+            ValueSlider(
               value: $value1,
               in: range,
               trackStyle: .medium(inset: true),
@@ -119,7 +119,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value1, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value2,
               in: range,
               trackStyle: .medium(inset: false),
@@ -130,7 +130,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value2, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value3,
               in: range,
               trackStyle: .medium(inset: true),
@@ -141,7 +141,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value3, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value4,
               in: range,
               trackStyle: .bold,
@@ -154,7 +154,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value4, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value5,
               in: range,
               trackStyle: .bold,
@@ -167,7 +167,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value5, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value6,
               in: range,
               trackStyle: .thin(inset: false),
@@ -181,7 +181,7 @@ public struct SupSlider: View {
             
             Text("Value: \(value6, specifier: "%.0f")")
             
-            SupSlider(
+            ValueSlider(
               value: $value7,
               in: range,
               trackStyle: .thin(inset: true),

@@ -22,7 +22,7 @@ struct ContentView: View {
     ScrollView {
       VStack(spacing: 0) {
         Group {
-          SupSlider(
+          ValueSlider(
             value: $value1,
             in: range,
             trackStyle: .medium(inset: true),
@@ -32,7 +32,7 @@ struct ContentView: View {
           
           Text("Value: \(value1, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value2,
             in: range,
             trackStyle: .medium(inset: false),
@@ -43,7 +43,7 @@ struct ContentView: View {
           
           Text("Value: \(value2, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value3,
             in: range,
             trackStyle: .medium(inset: true),
@@ -54,7 +54,7 @@ struct ContentView: View {
           
           Text("Value: \(value3, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value4,
             in: range,
             trackStyle: .bold,
@@ -67,7 +67,7 @@ struct ContentView: View {
           
           Text("Value: \(value4, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value5,
             in: range,
             trackStyle: .bold,
@@ -80,7 +80,7 @@ struct ContentView: View {
           
           Text("Value: \(value5, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value6,
             in: range,
             trackStyle: .thin(inset: false),
@@ -94,7 +94,7 @@ struct ContentView: View {
           
           Text("Value: \(value6, specifier: "%.0f")")
           
-          SupSlider(
+          ValueSlider(
             value: $value7,
             in: range,
             trackStyle: .thin(inset: true),
