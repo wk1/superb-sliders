@@ -5,6 +5,7 @@ public struct ValueSlider: View {
   @Binding var value: Double
   
   @State private var trackWidth: CGFloat = .zero
+  // TODO: The following will be needed for the ovleray label (not implemented yet)
   @State private var labelWidth: CGFloat = .zero
   @State private var showLabel: Bool = false
   @State private var thumbFrame: CGRect = .zero
